@@ -1,0 +1,33 @@
+.container{
+    color:white;
+    margin: 10px;
+}
+.poster{
+    width: 50%;
+}
+
+.infoBox{
+    display: inline-flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.watchBtn{
+    background-color: blue;
+    color: white;
+    width:120px;
+    height:100px;
+    border: none;
+    border-radius: 15px;
+    margin:20px;
+}
+.torrentBtn{
+    margin-top: 50px;
+    color:white;
+    background-color:red;
+    width:120px;
+    height: 100px;
+    border:none;
+    border-radius: 15px;
+    margin: 20px;
+}

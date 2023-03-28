@@ -1,0 +1,13 @@
+.container {
+    justify-content: center;
+}
+
+.movie {
+    margin-top: 40px;
+    margin-bottom:40px;
+    margin-left:20px;
+    margin-right:20px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(400px, 1fr));
+}

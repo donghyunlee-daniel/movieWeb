@@ -1,0 +1,11 @@
+.container{
+    top: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position:sticky;
+    z-index: 100;
+    justify-content:space-evenly;
+    color:white;
+    font-size: 35px;
+}
