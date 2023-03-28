@@ -5,7 +5,20 @@
     align-items: center;
     position:sticky;
     z-index: 100;
-    justify-content:space-evenly;
-    color:white;
+    color:#fafafa;
+    background-color: #e0bb20;
+    justify-content: space-evenly;
     font-size: 35px;
+    width:100%;
+}
+
+.container ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.container a{
+    text-decoration: none;
+    color:inherit;
 }

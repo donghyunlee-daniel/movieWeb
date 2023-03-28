@@ -1,18 +1,16 @@
 import styles from "./Header.module.css";
+
 function Header() {
   return (
     <div className={styles.container}>
       <div>
-        <span>Home</span>
+        <a href="/movieWeb">Home</a>
       </div>
       <div>
-        <span>Rates</span>
+        <a>Category</a>
       </div>
       <div>
-        <span>Genres</span>
-      </div>
-      <div>
-        <span>Years</span>
+        <a>Year</a>
       </div>
     </div>
   );
