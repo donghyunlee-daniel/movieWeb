@@ -6,16 +6,17 @@ import styles from "./Detail.module.css";
 import { Link } from "react-router-dom";
 function Detail() {
   const [movie, setMovie] = useState([]);
-  const getMovie = async () => {
-    const json = await (
-      await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
-    ).json();
-    setMovie(json.data.movie);
-  };
+  
   const { id } = useParams();
   useEffect(() => {
+    const getMovie = async () => {
+      const json = await (
+        await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)
+      ).json();
+      setMovie(json.data.movie);
+    };
     getMovie();
-  }, []);
+  }, [id]);
   return (
     <div>
       <Header/>
@@ -28,8 +29,8 @@ function Detail() {
           <div>
             <p>Year: {movie.year}</p>
             <p>Genres: </p>
-            {/* <ul>
-              {movie?.genres.map((item, index) => (
+            <ul>
+              {movie.genres && movie.genres.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
@@ -41,14 +42,14 @@ function Detail() {
             </div>
             <h4>Torrents</h4>
             <div>
-              {movie.torrents.map((item, index) => (
+              {movie.torrents && movie.torrents.map((item, index) => (
                 <Link to={item.url}>
                   <button className={styles.torrentBtn}>
                     😀Link {index + 1}
                   </button>
                 </Link>
               ))}
-            </div> */}
+            </div>
           </div>
         </div>
         <p>{movie.description_full}</p>
